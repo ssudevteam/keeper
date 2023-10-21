@@ -10,6 +10,7 @@ export const HiveMarker = (key, hiveProps) => {
         strength,
         brood,
         images,
+        callbacks
     } = hiveProps
 
     return (
@@ -17,6 +18,7 @@ export const HiveMarker = (key, hiveProps) => {
             key={key}
             id={id}
             coordinate={location}
+            onPress={() => callbacks?.notifyAll('remove')}
             // title={name}
             // description={description}
         >

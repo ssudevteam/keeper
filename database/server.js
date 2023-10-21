@@ -11,7 +11,7 @@ app.use(cors()); // Enables CORS for all routes
 app.use(express.json()); // Parses incoming requests with JSON payloads
 
 // MongoDB Connection
-mongoose.connect(process.env.MONGODB_URI, {
+mongoose.connect("mongodb+srv://ssudevteam:w4UFRLSRQhg6IxYg@cluster0.p1zs5cn.mongodb.net/Apiary", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 })
