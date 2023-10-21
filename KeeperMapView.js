@@ -1,9 +1,11 @@
-import {useEffect, useRef, useState} from "react";
-import MapView, {Callout, Marker, PROVIDER_GOOGLE} from "react-native-maps";
-import {Button, View, Text} from "react-native";
-import {StatusBar} from "expo-status-bar";
-import {Styles} from "./styles";
-import axios from "react-native/Libraries/Utilities/Dimensions";
+import { useRef, useState, useEffect } from "react";
+import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
+import * as FileSystem from "expo-file-system";
+import { shareAsync } from "expo-sharing";
+import { View } from "react-native";
+import { StatusBar } from "expo-status-bar";
+import { Styles } from "./styles";
+import axios from "axios";
 
 // For testing on mobile device must provide your own IP Address
 import {API_URL} from "@env";
