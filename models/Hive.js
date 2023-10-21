@@ -23,6 +23,10 @@ const HiveSchema = new mongoose.Schema({
       required: true
     }
   },
+  tasks_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Tasks",
+  },
   images: [{
     type: String
   }]

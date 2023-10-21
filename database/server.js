@@ -3,6 +3,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const Hive = require('../models/Hive');
+const Tasks = require('../models/Tasks');
 
 const app = express();
 
@@ -28,7 +29,28 @@ app.get('/hives', async (req, res) => {
     }
 });
 
-// Server Start
+app.get('/tasks', async (req, res) => {
+    try {
+        const tasks = await Tasks.find();
+        res.json(tasks);
+    } catch (error) {
+        res.status(500).json({ message: 'Internal Server Error' });
+    }
+});
+
+app.get('/tasks/:id', async (req, res) => {
+    try {
+        const task = await Tasks.findById(req.params.id);
+        if (!task) {
+            return res.status(404).json({ message: 'Task not found' });
+        }
+        res.json(task);
+    } catch (error) {
+        console.error("Error fetching task by ID:", error);  // Log the error to see more details
+        res.status(500).json({ message: 'Internal Server Error', error: error.message });
+    }
+});
+
 const PORT = 8000;
 app.listen(PORT, () => {
     console.log(`Server started on http://localhost:${PORT}`);
