@@ -1,0 +1,69 @@
+{
+  "hives": [
+    {
+      "_id": {
+        "$oid": "653357945a5f00bee32828a4"
+      },
+      "name": "Green Valley",
+      "strength": 500,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 38.25127356358066,
+        "longitude": -122.16285143047573
+      },
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "653357945a5f00bee32828a5"
+      },
+      "name": "Liberty Farms",
+      "strength": 600,
+      "sugarSyrup": false,
+      "location": {
+        "latitude": 38.33168121956281,
+        "longitude": -121.72436255961657
+      },
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "653357945a5f00bee32828a6"
+      },
+      "name": "Deer Park",
+      "strength": 350,
+      "sugarSyrup": false,
+      "location": {
+        "latitude": 38.53229997124347,
+        "longitude": -122.46741827577351
+      },
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "653357945a5f00bee32828a7"
+      },
+      "name": "Bloomfield",
+      "strength": 450,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 38.3176166205253,
+        "longitude": -122.82418258488178
+      },
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "653357945a5f00bee32828a8"
+      },
+      "name": "Boyers Landing",
+      "strength": 700,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 38.94969519312884,
+        "longitude": -121.81185722351076
+      },
+      "images": []
+    }
+  ]
+}

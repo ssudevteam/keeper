@@ -9,21 +9,77 @@ import axios from "react-native/Libraries/Utilities/Dimensions";
 import {API_URL} from "@env";
 import {HiveMarker} from "./HiveMarker";
 
+
+const sortMapAscending = (map) => {
+    return new Map([...map.entries()].sort((a, b) => a[1] - b[1]));
+}
+
+const printMap = (map) => {
+    map.forEach((value, key) => {
+        console.log(`${key}: ${value}`)
+    })
+}
+
 let originLocation = [{
     name: "SSU Campus", location: {
         latitude: 38.34008053681795, longitude: -122.6755222789825,
     }, description: "Charles Darwin Building"
-},]
+}];
+
+const GOOGLE_API_KEY = 'YOUR_GOOGLE_API_KEY';
+
+import {hives} from './database/hives.json'
 
 export default function KeeperMapView() {
-    const [allHives, setAllHives] = useState(originLocation);
-    const [locationsOfInterest, setLocationsOfInterest] = useState(originLocation);
+    const [allHives, setAllHives] = useState(hives);
+    const [locations, setLocations] = useState(originLocation);
+    const [optimalRoutes, setOptimalRoutes] = useState(null);
     const [count, setCount] = useState(0);
-    // const [draggableMarkerCoord, setDraggableMarkerCoord] = useState({
-    //     latitude: 38.34008053681795,
-    //     longitude: -122.6755222789825
-    // });
     const mapRef = useRef();
+
+    const getAllHiveCoordinates = () => {
+        const coordinates = [];
+        allHives.forEach((hive) => {
+            let id = null;
+            if (hive.hasOwnProperty("$oid")) {
+                id = hive._id.$oid;
+            } else {
+                id = hive._id;
+            }
+            coordinates.push({id: id, coordinates: hive.location});
+        });
+        return coordinates;
+    }
+
+    const fetchHiveDistances = async () => {
+        const hiveCoords = getAllHiveCoordinates();
+        let distanceMap = new Map();
+        const origin = `${originLocation[0].location.latitude},${originLocation[0].location.longitude}`;
+
+        const promises = hiveCoords.map(async (hive) => {
+            const dest = `${hive.coordinates.latitude},${hive.coordinates.longitude}`;
+            try {
+                const resp = await fetch(`https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${dest}&key=${GOOGLE_API_KEY}`);
+                const respJson = await resp.json();
+                const legs = respJson.routes[0].legs;
+                let distance = 0;
+                legs.forEach((leg) => {
+                    distance += leg.distance.value; // Value is in meters
+                });
+                console.log(`hive ${hive.id}, with distance ${distance} has been added`);
+                distanceMap.set(hive.id, distance);
+            } catch (error) {
+                console.log('Error: ', error);
+            }
+        });
+
+        await Promise.all(promises);
+
+        distanceMap = sortMapAscending(distanceMap);
+
+        printMap(distanceMap);
+        return distanceMap;
+    }
 
     // useEffect(() => {
     //     // Fetching the hives data from the API endpoint using axios
@@ -39,12 +95,9 @@ export default function KeeperMapView() {
     //         });
     // }, []);
 
-    // Map over allHives to render the Marker components
-    // for each hive using the object's location coordinates along with other data to display.
     const renderHives = () => {
         console.log('renderHives called');
         return allHives.map((hive, index) => {
-            console.log(hive);
             return HiveMarker(index, hive);
         });
     };
@@ -54,8 +107,7 @@ export default function KeeperMapView() {
     };
 
     const showLocationsOfInterest = () => {
-        return locationsOfInterest.map((item, index) => {
-            console.log(item.name);
+        return locations.map((item, index) => {
             return (<Marker
                 key={index}
                 coordinate={item.location}
@@ -86,7 +138,7 @@ export default function KeeperMapView() {
         return null;
     }
 
-    const handleOnPress = (state) => {
+    const handleOnPress = async (state) => {
         const event = state['nativeEvent'];
         const hive = getHiveFromLocation(event.coordinate);
         if (hive) {
@@ -95,6 +147,10 @@ export default function KeeperMapView() {
         } else {
             addHive(event.coordinate);
         }
+        fetchHiveDistances()
+            .then(distanceMap => {
+                setOptimalRoutes(distanceMap);
+            });
     };
 
     const addHive = (coordinates) => {
@@ -105,15 +161,9 @@ export default function KeeperMapView() {
         const latitude = coordinates.latitude;
         const longitude = coordinates.longitude;
         const newHive = {
-            name: `Hive #${count + 1}`,
-            location: {
-                latitude: latitude,
-                longitude: longitude
-            },
-            description: "",
-            strength: '',
-            brood: '',
-            images: null
+            _id: count + 1, name: `Hive #${count + 1}`, location: {
+                latitude: latitude, longitude: longitude
+            }, description: "", strength: '', brood: '', images: null
         };
         setAllHives(prevHives => [...prevHives, newHive]);
         setCount(count + 1);
@@ -131,7 +181,7 @@ export default function KeeperMapView() {
             onPress={handleOnPress}
             // customMapStyle={mapJson}
         >
-            {/*{showLocationsOfInterest()}*/}
+            {showLocationsOfInterest()}
             {renderHives()}
             {/*<Marker*/}
             {/*    draggable*/}
