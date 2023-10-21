@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "expo-map-tutorial",
-    "slug": "expo-map-tutorial",
+    "name": "keeper-map",
+    "slug": "keeper-map",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,13 +19,13 @@
     ],
     "ios": {
       "supportsTablet": true,
-      "bundleIdentifier": "com.misscoding.expomaptutorial",
+      "bundleIdentifier": "com.ssudevteam.keeper",
       "config": {
         "googleMapsApiKey": "MY API KEY"
       }
     },
     "android": {
-      "package": "com.misscoding.expomaptutorial",
+      "package": "com.ssudevteam.keeper",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
