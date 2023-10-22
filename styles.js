@@ -7,7 +7,8 @@ export const Styles = {
     },
     map: {
         width: '100%',
-        height: '100%'
+        height: '100%',
+        bottom: 10
     },
     mapOverlay: {
         position: "absolute",
@@ -19,5 +20,15 @@ export const Styles = {
         left: "25%",
         width: "50%",
         textAlign: "center"
+    },
+    optionGroup: {
+        height: '23%',
+        // justifyContent: 'center',
+    },
+    optionButton: {
+        height: 15,
+        borderBottom: ' red'
+        // justifyContent: 'center',
     }
+
 }
