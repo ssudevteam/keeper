@@ -2,20 +2,7 @@
   "hives": [
     {
       "_id": {
-        "$oid": "653357945a5f00bee32828a4"
-      },
-      "name": "Green Valley",
-      "strength": 500,
-      "sugarSyrup": true,
-      "location": {
-        "latitude": 38.25127356358066,
-        "longitude": -122.16285143047573
-      },
-      "images": []
-    },
-    {
-      "_id": {
-        "$oid": "653357945a5f00bee32828a5"
+        "$oid": "653357933988044ee32828a6"
       },
       "name": "Liberty Farms",
       "strength": 600,
@@ -24,11 +11,13 @@
         "latitude": 38.33168121956281,
         "longitude": -121.72436255961657
       },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 114469,
       "images": []
     },
     {
       "_id": {
-        "$oid": "653357945a5f00bee32828a6"
+        "$oid": "643357933a5f044ee32828a6"
       },
       "name": "Deer Park",
       "strength": 350,
@@ -37,11 +26,13 @@
         "latitude": 38.53229997124347,
         "longitude": -122.46741827577351
       },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 61075,
       "images": []
     },
     {
       "_id": {
-        "$oid": "653357945a5f00bee32828a7"
+        "$oid": "653357944a5880bee32828a7"
       },
       "name": "Bloomfield",
       "strength": 450,
@@ -50,11 +41,13 @@
         "latitude": 38.3176166205253,
         "longitude": -122.82418258488178
       },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 17029,
       "images": []
     },
     {
       "_id": {
-        "$oid": "653357945a5f00bee32828a8"
+        "$oid": "65335797115f00bee32828a8"
       },
       "name": "Boyers Landing",
       "strength": 700,
@@ -63,6 +56,533 @@
         "latitude": 38.94969519312884,
         "longitude": -121.81185722351076
       },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 166850,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "65335794335f0000e32828a8"
+      },
+      "name": "Forest Lake",
+      "strength": 600,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 38.81263868084592,
+        "longitude": -122.71599635481834
+      },
+      "tasks_id":"6534422194abe29175b3793b",
+      "distanceFromOrigin": 85554,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "653334945a5f933ee32028a8"
+      },
+      "name": "Knoxville",
+      "strength": 600,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 38.825750509010824,
+        "longitude": -122.34111104160546
+      },
+      "tasks_id":"6534422194abe29175b3793b",
+      "distanceFromOrigin": 127479,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "65333499445f00aee32828a8"
+      },
+      "name": "San Antonio Valley",
+      "strength": 300,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 37.38894465427815,
+        "longitude": -121.44884202629328
+      },
+      "tasks_id":"6534422194abe29175b3793b",
+      "distanceFromOrigin": 187599,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "65333494675110aee32828a8"
+      },
+      "name": "Forest Hill",
+      "strength": 500,
+      "sugarSyrup": false,
+      "location": {
+        "latitude": 38.99045907529167,
+        "longitude": -120.82300957292318
+      },
+      "tasks_id":"6534422194abe29175b3793b",
+      "distanceFromOrigin": 245612,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a8811aee32828a8"
+      },
+      "name": "Buena Vista",
+      "strength": 450,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 38.29702375909486,
+        "longitude": -120.9393557533622
+      },
+      "tasks_id":"6534422194abe29175b3793b",
+      "distanceFromOrigin": 210877,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a5f22aee3282778"
+      },
+      "name": "Marsh Creek Springs",
+      "strength": 200,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 37.909284432119016,
+        "longitude": -121.86311826109886
+      },
+      "tasks_id":"6534422194abe29175b3793c",
+      "distanceFromOrigin": 110239,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334875a5f22aee32828a8"
+      },
+      "name": "Kings Mountain",
+      "strength": 600,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 37.41355189309658,
+        "longitude": -122.33804393559696
+      },
+      "tasks_id":"6534422194abe29175b3793c",
+      "distanceFromOrigin": 123776,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a5f22aee32358a8"
+      },
+      "name": "Mountain Ranch",
+      "strength": 700,
+      "sugarSyrup": false,
+      "location": {
+        "latitude": 38.216717572081265,
+        "longitude": -120.58495212346314
+      },
+      "tasks_id":"6534422194abe29175b3793c",
+      "distanceFromOrigin": 222011,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a5f22aee32899a8"
+      },
+      "name": "Eugene",
+      "strength": 500,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 37.897075996133765,
+        "longitude": -120.87361481040718
+      },
+      "tasks_id":"6534422194abe29175b3793c",
+      "distanceFromOrigin": 198959,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626114945a5f22aee32828a8"
+      },
+      "name": "Kasson Road",
+      "strength": 800,
+      "sugarSyrup": false,
+      "location": {
+        "latitude": 37.707906292653995,
+        "longitude": -121.30222108215094
+      },
+      "tasks_id":"6534422194abe29175b3793c",
+      "distanceFromOrigin": 179491,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "62633494519f22aee32828a8"
+      },
+      "name": "Pleasant Grove",
+      "strength": 100,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 38.840918284245554,
+        "longitude": -121.47999957203865
+      },
+      "tasks_id":"6534422194abe29175b3793c",
+      "distanceFromOrigin": 164936,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a5f85aee32828a8"
+      },
+      "name": "Denair",
+      "strength": 300,
+      "sugarSyrup": false,
+      "location": {
+        "latitude": 37.53841185404945,
+        "longitude": -120.79465225338936
+      },
+      "tasks_id":"6534422194abe29175b3793d",
+      "distanceFromOrigin": 234913,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334995a5f85aee32828a8"
+      },
+      "name": "Lone Star",
+      "strength": 550,
+      "sugarSyrup": false,
+      "location": {
+        "latitude": 39.163016742160885,
+        "longitude": -122.06645920872688
+      },
+      "tasks_id":"6534422194abe29175b3793d",
+      "distanceFromOrigin": 178581,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a5f812ee32828a8"
+      },
+      "name": "Spring Valley",
+      "strength": 450,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 39.07222931294419,
+        "longitude": -122.59572207927704
+      },
+      "tasks_id":"6534422194abe29175b3793d",
+      "distanceFromOrigin": 119902,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a5f85ae092828a8"
+      },
+      "name": "Canyon Road",
+      "strength": 450,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 38.71104862085212,
+        "longitude": -122.9282073676586
+      },
+      "tasks_id":"6534422194abe29175b3793d",
+      "distanceFromOrigin": 54181,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a5f85aee32118a8"
+      },
+      "name": "Mt Jackson",
+      "strength": 150,
+      "sugarSyrup": false,
+      "location": {
+        "latitude": 38.512978412621315,
+        "longitude": -122.91621990501882
+      },
+      "tasks_id":"6534422194abe29175b3793d",
+      "distanceFromOrigin": 40279,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a5f825ee32828a8"
+      },
+      "name": "Green Hill Road",
+      "strength": 750,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 38.41640920978956,
+        "longitude": -122.89751451462507
+      },
+      "tasks_id":"6534422194abe29175b3793d",
+      "distanceFromOrigin": 31541,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a3285aee32828a8"
+      },
+      "name": "Brela",
+      "strength": 300,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 38.58132420942913,
+        "longitude": -120.97416009753941
+      },
+      "tasks_id":"6534422194abe29175b3793d",
+      "distanceFromOrigin": 187998,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a5f878ee32828a8"
+      },
+      "name": "New Almaden",
+      "strength": 400,
+      "sugarSyrup": false,
+      "location": {
+        "latitude": 37.16929305812345,
+        "longitude": -121.81870490312576
+      },
+      "tasks_id":"6534422194abe29175b3793d",
+      "distanceFromOrigin": 177996,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a5f8509e32828a8"
+      },
+      "name": "Crows Landing",
+      "strength": 150,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 37.39689456898199,
+        "longitude": -121.05545952916145
+      },
+      "tasks_id":"6534422194abe29175b3793d",
+      "distanceFromOrigin": 214338,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "623134945a5f8509e32828a8"
+      },
+      "name": "Columbia",
+      "strength": 150,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 38.04983363049543,
+        "longitude": -120.39667513221501
+      },
+      "tasks_id":"6534422194abe29175b3793d",
+      "distanceFromOrigin": 259754,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "62633494775f8509e32828a8"
+      },
+      "name": "Montezuma",
+      "strength": 600,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 37.90884796015491,
+        "longitude": -120.44049270451069
+      },
+      "tasks_id":"6534422194abe29175b3793d",
+      "distanceFromOrigin": 243754,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334555a5f8509e32828a8"
+      },
+      "name": "Claribel",
+      "strength": 300,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 37.72253445082082,
+        "longitude": -120.82079138606788
+      },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 224738,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a5f8999e32828a8"
+      },
+      "name": "Bell Station",
+      "strength": 400,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 37.04516802882996,
+        "longitude": -121.31164133548737
+      },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 228472,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a5f8576e32828a8"
+      },
+      "name": "Hills Ferry",
+      "strength": 700,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 37.334292395752875,
+        "longitude": -120.96983503550292
+      },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 230309,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a5f3409e11828a8"
+      },
+      "name": "Eagle Tree",
+      "strength": 600,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 38.19311276016509,
+        "longitude": -121.50413911789654
+      },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 133539,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "62633494555f8509e32828a8"
+      },
+      "name": "Dantoni",
+      "strength": 400,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 39.16891882077537,
+        "longitude": -121.52372226119041
+      },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 200108,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a888511e32828a8"
+      },
+      "name": "Indian Springs",
+      "strength": 300,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 39.168491745780806,
+        "longitude": -121.1893191933632
+      },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 231556,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "626334945a5f8588e32118a8"
+      },
+      "name": "Happy Valley",
+      "strength": 300,
+      "sugarSyrup": false,
+      "location": {
+        "latitude": 38.700766244762015,
+        "longitude": -120.53710889071225
+      },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 245801,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "622234945a5f8509e32828a8"
+      },
+      "name": "Fiddletown",
+      "strength": 250,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 38.498518476062465,
+        "longitude": -120.75006019324064
+      },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 207958,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "622234945a5f8889e32828a8"
+      },
+      "name": "Buckhorn",
+      "strength": 200,
+      "sugarSyrup": false,
+      "location": {
+        "latitude": 38.444217639084584,
+        "longitude": -120.51146496087313
+      },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 235101,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "622234945a5f8009e32828a8"
+      },
+      "name": "Cherokee",
+      "strength": 650,
+      "sugarSyrup": false,
+      "location": {
+        "latitude": 37.989941737566326,
+        "longitude": -120.22774893790483
+      },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 271053,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "622234945a5f4409e32828a8"
+      },
+      "name": "Soda Springs",
+      "strength": 400,
+      "sugarSyrup": true,
+      "location": {
+        "latitude": 39.03876184888582,
+        "longitude": -123.29565726220606
+      },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 127767,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "622234945a5f8533e32828a8"
+      },
+      "name": "Annapolis",
+      "strength": 500,
+      "sugarSyrup": false,
+      "location": {
+        "latitude": 38.72937400832578,
+        "longitude": -123.35926752537489
+      },
+      "tasks_id":"6534422194abe29175b37939",
+      "distanceFromOrigin": 117567,
+      "images": []
+    },
+    {
+      "_id": {
+        "$oid": "622234945a228509e32828a8"
+      },
+      "name": "Cazadero",
+      "strength": 700,
+      "sugarSyrup": false,
+      "location": {
+        "latitude": 38.52828106316886,
+        "longitude": -123.09415731579065
+      },
+      "tasks_id":"6534422194abe29175b3793b",
+      "distanceFromOrigin": 70695,
       "images": []
     }
   ]

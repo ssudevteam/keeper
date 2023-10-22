@@ -23,6 +23,13 @@ const HiveSchema = new mongoose.Schema({
       required: true
     }
   },
+  distanceFromOrigin: {
+    type: Number,
+  },
+  tasks_id: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "Tasks",
+  },
   images: [{
     type: String
   }]

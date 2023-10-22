@@ -1,7 +1,7 @@
 import {Callout, Marker} from "react-native-maps";
 import {Button, Text} from "react-native";
 
-export const HiveMarker = (key, hiveProps) => {
+export const HiveMarker = (key, hiveProps, distance) => {
     const {
         id,
         name,
@@ -17,19 +17,16 @@ export const HiveMarker = (key, hiveProps) => {
             key={key}
             id={id}
             coordinate={location}
-            // title={name}
-            // description={description}
         >
             <Callout>
                 {name && <Text>{`Name: ${name}`}</Text>}
                 {description && <Text>{`Description: ${description}`}</Text>}
                 {brood && <Text>{`Brood: ${brood}`}</Text>}
                 {strength && <Text>{`Strength: ${strength}`}</Text>}
-                {images && <Text>{`Images: ${images}`}</Text>}
-                {location &&
-                    <Text>{`Lat: ${location.latitude}\nLong: ${location.longitude}`}</Text>}
+                {images && images.length > 0 && <Text>{`Images: ${images.length}`}</Text>}
+                <Text>Distance: {distance}</Text>
                 <Button title='Edit' onPress={() => null}/>
             </Callout>
         </Marker>
     );
-};
+}
