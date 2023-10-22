@@ -97,6 +97,10 @@ export default function KeeperMapView() {
         return distanceMap;
     }
 
+    const createRoutes=() => {
+
+    }
+
     // useEffect(() => {
     //     // Fetching the hives data from the API endpoint using axios
     //     axios
