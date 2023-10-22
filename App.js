@@ -14,7 +14,7 @@ import { HiveProvider } from "./HiveProvider";
 
 const Tab = createBottomTabNavigator();
 
-function MainTabNavigator() {
+function    MainTabNavigator() {
   return (
     <HiveProvider>
       <Tab.Navigator

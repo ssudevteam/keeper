@@ -43,7 +43,7 @@ const DATA = [
         {
             "id": 5,
             "hive": "Boyers Landing",
-            "Task": "Maintenance",
+            "Task": "🛠️ Maintenance",
             "Expected Work Hours": 3,
             "Priority": 4,
             "recurring": false
@@ -94,7 +94,7 @@ export default function TasksScreen() {
                                 style={[
                                     styles.item,
                                     {
-                                        height: item["Expected Work Hours"] * 50,
+                                        height: item["Expected Work Hours"] * 30,
                                         marginBottom: expandedTask === item.id ? 120 : 0
                                     }
                                 ]} // Adjust the height and margin-bottom for dropdown
@@ -114,7 +114,7 @@ export default function TasksScreen() {
                                 {expandedTask === item.id && (
                                     <Animated.View style={[styles.dropdown, {height: dropdownHeight}]}>
                                         {/* Sample dropdown tasks. Replace with your actual tasks. */}
-                                        {["Task 1", "Task 2", "Task 3"].map((taskName, index) => (
+                                        {["🍯 Honey Harvesting", "Field Report","Pollenation"].map((taskName, index) => (
                                             <TouchableOpacity
                                                 key={index}
                                                 onPress={() => {
@@ -168,7 +168,7 @@ const styles = StyleSheet.create({
     //     borderBottomColor: '#ddd',
     // },
     titlehive: {
-        fontSize: 16,
+        fontSize: 12,
     },
     divider: {
         marginTop: 20,
@@ -181,7 +181,7 @@ const styles = StyleSheet.create({
     item: {
         flexDirection: 'row',
         alignItems: 'center',
-        padding: 15,
+        paddingLeft: 15,
         backgroundColor: '#f9f9f9',
         borderBottomWidth: 1,
         borderBottomColor: '#ddd',
@@ -189,11 +189,11 @@ const styles = StyleSheet.create({
         borderRadius: 5
     },
     title: {
-        fontSize: 16,
+        fontSize: 12,
     },
     badge: {
         position: 'absolute',
-        top: 10,
+        top: 0,
         right: 0,
         borderRadius: 15,
         width: 30,

@@ -31,9 +31,9 @@ export default function HomeScreen() {
                     <Announcements/>
 
                     {/* Promo Section */}
-                    <View style={{alignItems: "center", marginTop: 20}}>
+                    <View style={{alignItems: "center", marginTop: 25}}>
                         <Image
-                            source={require("../assets/images/home_map.png")}
+                            source={require("../assets/images/map.png")}
                             style={{
                                 borderRadius: 10,
                                 width: "100%",
@@ -53,7 +53,7 @@ export default function HomeScreen() {
                         padding-20 // Internal padding
                         backgroundColor="white"
                         margin-5
-                        marginT-20
+                        marginT-40
                         style={{
                             flexDirection: "row",
                             justifyContent: "space-between",
