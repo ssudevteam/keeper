@@ -1,23 +1,20 @@
 import {useEffect, useRef, useState} from "react";
-import MapView, {Callout, Marker, PROVIDER_GOOGLE} from "react-native-maps";
+import MapView, {Callout, Marker, Polyline, PROVIDER_GOOGLE} from "react-native-maps";
 import {Button, View, Text} from "react-native";
 import {StatusBar} from "expo-status-bar";
 import {Styles} from "./styles";
+import {decode} from "@googlemaps/polyline-codec";
 import axios from "react-native/Libraries/Utilities/Dimensions";
 
 // For testing on mobile device must provide your own IP Address
 import {API_URL} from "@env";
 import {HiveMarker} from "./HiveMarker";
+import {hives} from './database/hives.json'
 
+const GOOGLE_API_KEY = 'AIzaSyCF_yE-eEdmZ8a4Ndjw1QEKxC5TGBRD4eQ';
 
 const sortMapAscending = (map) => {
     return new Map([...map.entries()].sort((a, b) => a[1] - b[1]));
-}
-
-const printMap = (map) => {
-    map.forEach((value, key) => {
-        console.log(`${key}: ${value}`)
-    })
 }
 
 let originLocation = [{
@@ -26,14 +23,22 @@ let originLocation = [{
     }, description: "Charles Darwin Building"
 }];
 
-const GOOGLE_API_KEY = 'YOUR_GOOGLE_API_KEY';
+const Treeify = (map) => {
+    const nodes = [];
+    const edges = []
 
-import {hives} from './database/hives.json'
+    map.forEach((value, key) => {
+        nodes.push({key, visited: false});
+        edges.push({key, distance: false});
+    });
+
+}
 
 export default function KeeperMapView() {
     const [allHives, setAllHives] = useState(hives);
     const [locations, setLocations] = useState(originLocation);
     const [optimalRoutes, setOptimalRoutes] = useState(null);
+    const [polyLines, setPolyLines] = useState([]);
     const [count, setCount] = useState(0);
     const mapRef = useRef();
 
@@ -51,8 +56,9 @@ export default function KeeperMapView() {
         return coordinates;
     }
 
-    const fetchHiveDistances = async () => {
+    const fetchDistances = async () => {
         const hiveCoords = getAllHiveCoordinates();
+        const polyMap = new Map();
         let distanceMap = new Map();
         const origin = `${originLocation[0].location.latitude},${originLocation[0].location.longitude}`;
 
@@ -61,12 +67,24 @@ export default function KeeperMapView() {
             try {
                 const resp = await fetch(`https://maps.googleapis.com/maps/api/directions/json?origin=${origin}&destination=${dest}&key=${GOOGLE_API_KEY}`);
                 const respJson = await resp.json();
-                const legs = respJson.routes[0].legs;
+                const defaultRoute = respJson.routes[0];
+                const polyLine = defaultRoute.overview_polyline;
+                const encodedLine = polyLine['points'];
+                const decodedLine = decode(encodedLine);
+                polyMap.set(hive.id, []);
+                decodedLine.forEach((pair) => {
+                    const coords = {
+                        latitude: pair[0],
+                        longitude: pair[1]
+                    }
+                    polyMap.get(hive.id).push(coords);
+                })
+
+                const legs = defaultRoute.legs;
                 let distance = 0;
                 legs.forEach((leg) => {
                     distance += leg.distance.value; // Value is in meters
                 });
-                console.log(`hive ${hive.id}, with distance ${distance} has been added`);
                 distanceMap.set(hive.id, distance);
             } catch (error) {
                 console.log('Error: ', error);
@@ -74,10 +92,8 @@ export default function KeeperMapView() {
         });
 
         await Promise.all(promises);
-
+        setPolyLines(polyMap);
         distanceMap = sortMapAscending(distanceMap);
-
-        printMap(distanceMap);
         return distanceMap;
     }
 
@@ -102,25 +118,51 @@ export default function KeeperMapView() {
         });
     };
 
+    const renderPolyLines = () => {
+        const allLines = []
+        let key = 0;
+        polyLines.forEach((allPoints, id) => {
+            allLines.push(
+                <Polyline
+                    key={key}
+                    coordinates={allPoints}
+                    strokeWidth={3}
+                    strokeColor={"rgba(0,122,255,0.7)"}
+                />
+            )
+            key += 1;
+        })
+        return allLines;
+    }
+
+    useEffect(() => {
+        fetchDistances()
+            .then(distanceMap => {
+                setOptimalRoutes(distanceMap);
+            });
+    }, [allHives])
+
     const onRegionChange = (region) => {
         console.log(region);
     };
 
     const showLocationsOfInterest = () => {
         return locations.map((item, index) => {
-            return (<Marker
-                key={index}
-                coordinate={item.location}
-                title={item.name}
-                description={item.description}
-            >
-                <Callout>
-                    <Text>{item.name}</Text>
-                    <Text>{item.description}</Text>
-                    <Text>{`Lat: ${item.location.latitude}\nLong: ${item.location.longitude})`}</Text>
-                    <Button title='Edit' onPress={() => null}/>
-                </Callout>
-            </Marker>)
+            return (
+                <Marker
+                    key={index}
+                    coordinate={item.location}
+                    title={item.name}
+                    description={item.description}
+                >
+                    <Callout>
+                        <Text>{item.name}</Text>
+                        <Text>{item.description}</Text>
+                        <Text>{`Lat: ${item.location.latitude}\nLong: ${item.location.longitude})`}</Text>
+                        <Button title='Edit' onPress={() => null}/>
+                    </Callout>
+                </Marker>
+            )
         });
     };
 
@@ -139,7 +181,7 @@ export default function KeeperMapView() {
     }
 
     const handleOnPress = async (state) => {
-        const event = state['nativeEvent'];
+        const event = state.nativeEvent;
         const hive = getHiveFromLocation(event.coordinate);
         if (hive) {
             // Show annotation and/or edit menu, etc.
@@ -147,10 +189,6 @@ export default function KeeperMapView() {
         } else {
             addHive(event.coordinate);
         }
-        fetchHiveDistances()
-            .then(distanceMap => {
-                setOptimalRoutes(distanceMap);
-            });
     };
 
     const addHive = (coordinates) => {
@@ -179,27 +217,10 @@ export default function KeeperMapView() {
                 latitude: 38.34008053681795, longitude: -122.6755222789825, latitudeDelta: 0.5, longitudeDelta: 0.3,
             }}
             onPress={handleOnPress}
-            // customMapStyle={mapJson}
         >
             {showLocationsOfInterest()}
             {renderHives()}
-            {/*<Marker*/}
-            {/*    draggable*/}
-            {/*    pinColor='#0000ff'*/}
-            {/*    coordinate={draggableMarkerCoord}*/}
-            {/*    onDragEnd={(e) => setDraggableMarkerCoord(e.nativeEvent.coordinate)}*/}
-            {/*/>*/}
-            {/*<Marker*/}
-            {/*    pinColor='#00ff00'*/}
-            {/*    coordinate={{latitude: -35, longitude: 147}}*/}
-            {/*>*/}
-            {/*<Callout>*/}
-            {/*    <Text>Count: {count}</Text>*/}
-            {/*    <Button title='Increment Count' onPress={() => setCount(count + 1)}/>*/}
-            {/*</Callout>*/}
-            {/*</Marker>*/}
-            {/*<Text style={styles.mapOverlay}>Longitude: {draggableMarkerCoord.longitude},*/}
-            {/*    latitude: {draggableMarkerCoord.latitude}</Text>*/}
+            {renderPolyLines()}
         </MapView>
         <StatusBar style="auto"/>
     </View>);
