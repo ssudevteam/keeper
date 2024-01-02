@@ -9,7 +9,7 @@
   <h3 align="center">Keeper</h3>
 
   <p align="center">
-    "Innovating for Social Good" Project
+    Innovating for Social Good Project
 
 </br>
      By:
