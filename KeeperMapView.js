@@ -11,7 +11,7 @@ import {API_URL} from "@env";
 import {HiveMarker} from "./HiveMarker";
 import {hives} from './database/hives.json'
 
-const GOOGLE_API_KEY = 'AIzaSyCF_yE-eEdmZ8a4Ndjw1QEKxC5TGBRD4eQ';
+const GOOGLE_API_KEY = 'API_KEY_HERE';
 
 const sortMapAscending = (map) => {
     return new Map([...map.entries()].sort((a, b) => a[1] - b[1]));
