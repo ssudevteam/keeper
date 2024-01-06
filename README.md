@@ -34,15 +34,9 @@
       </ul>
     </li>
     <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
+      <a href="#development">Development</a>
     </li>
-    <li><a href="#usage">Usage</a></li>
     <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
     <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
     <li><a href="#acknowledgments">Acknowledgments</a></li>
@@ -58,10 +52,8 @@
 <img width="148" alt="Screenshot 2024-01-06 at 12 10 33 PM" src="https://github.com/ssudevteam/keeper/assets/18277544/b0dbf509-98ee-4f9a-b4f1-4790ac1d548c"> &nbsp; &nbsp;
 <img width="140" alt="Screenshot 2024-01-06 at 12 10 46 PM" src="https://github.com/ssudevteam/keeper/assets/18277544/64eb9bea-d7b0-40d7-9311-a2e9d29c79c8">  &nbsp;  &nbsp;
 <img width="146" alt="Screenshot 2024-01-06 at 12 10 21 PM" src="https://github.com/ssudevteam/keeper/assets/18277544/3489a074-84d1-47c6-aeda-06b2def82676">
-
-<sub>Screenshots on iOS</sub>
 </br></br>
-Keeper is an apicultural(Beekeeping) app that helps bees stay healthy during pollination season. It addresses a common challenge faced by growers: the loss of entire hives due to communication breakdowns within large organizations. Keeper provides teams with the ability to automatically generate work routes/schedules based on the company's most important daily tasks. It also allows easy reporting  of in-field metrics from a mobile app to facilite on-the-job coordination. We set out to create an app that focused on animal species and conservation efforts as our entry to the annual Sonoma State University Hackathon, where we came in 2nd overall!
+Keeper is an apicultural(Beekeeping) app to manage the health of our important pollinators. It addresses a common challenge faced by growers: the loss of entire hives due to communication breakdowns within large organizations. Keeper provides teams with the ability to automatically generate work routes/schedules based on the company's most important daily tasks. Our app focuses on animal species and conservation efforts as our entry to the annual Sonoma State University Hackathon, where we placed  2nd overall 🥈!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -73,28 +65,18 @@ Keeper is an apicultural(Beekeeping) app that helps bees stay healthy during pol
 * [![React][React.js]][React-url]
 * [![Expo][Expo.js]][Expo-url]
 * [![Mongo][MongoDb]][Mongo-url]
+* [![Google][Google]][Google-url]
+
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### Video Demo
+https://www.youtube.com/watch?v=lyVZktFsbaQ
 
+</br>
 
 <!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
-
-### Installation
-
-## Setup Instructions for the Mobile App
+## Development
 
 Follow the steps below to get the application up and running on your local environment.
 
@@ -152,9 +134,9 @@ Follow the steps below to get the application up and running on your local envir
 ## Roadmap
 
 - [ ] Add Multi-Language Support
-- [ ] Add AI Chat Bot to company knowledgebase
+- [ ] Add Company KnowledgeBase/Health Compendium
 - [ ] Refine Travelling Salesman Algorithim
-- [ ] Create website backend
+- [ ] Create website
 
 See the [open issues](https://github.com/ssudevteam/keeper/issues) for a full list of proposed features (and known issues).
 
@@ -192,32 +174,11 @@ Thank you to the following departments and Mr. Stewart for putting on the Innova
 
 <!-- MARKDOWN LINKS & IMAGES -->
 <!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=for-the-badge
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=for-the-badge
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=for-the-badge
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=for-the-badge
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=for-the-badge
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
 [MongoDB]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
 [Mongo-url]: https://www.mongodb.com
 [React.js]: https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Expo.js]: https://img.shields.io/badge/Expo-35495E?style=for-the-badge&logo=expo&logoColor=4FC08D
 [Expo-url]: https://vuejs.org/
-[Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
-[Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
-[Laravel.com]: https://img.shields.io/badge/Laravel-FF2D20?style=for-the-badge&logo=laravel&logoColor=white
-[Laravel-url]: https://laravel.com
-[Bootstrap.com]: https://img.shields.io/badge/Bootstrap-563D7C?style=for-the-badge&logo=bootstrap&logoColor=white
-[Bootstrap-url]: https://getbootstrap.com
-[JQuery.com]: https://img.shields.io/badge/jQuery-0769AD?style=for-the-badge&logo=jquery&logoColor=white
-[JQuery-url]: https://jquery.com 
+[Google]: https://img.shields.io/badge/Google_Maps_API-4285F4?style=for-the-badge&logo=google-cloud&logoColor=white
+[Google-url]: https://developers.google.com/maps
