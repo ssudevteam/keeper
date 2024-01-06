@@ -15,7 +15,7 @@
      By:
     <a href="https://github.com/harrisb002">Ben</a>
     ·
-    <a href="https://github.com/joeltho">Joel</a>
+    <a href="https://github.com/joeletho">Joel</a>
     ·
     <a href="https://github.com/jordannakamoto">Jordan</a>
   </p>
