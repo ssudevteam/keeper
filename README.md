@@ -78,6 +78,19 @@ https://www.youtube.com/watch?v=lyVZktFsbaQ
 <!-- GETTING STARTED -->
 ## Development
 
+### Files and Folders
+```
+	keeper
+	├── Screens             - ReactNative code for each UI screen
+	├── assets              - Images and App icons
+        └── database            - MongoDB server connection and sample data
+            App.js              - App Entry point and Navigation code
+            HiveMarker.js       - Hive Marker Graphic RN Component
+            KeeperMapView.js    - MapView RN Component
+            app.json            - app config, setup Maps API Key here
+```
+
+### Project Setup
 Follow the steps below to get the application up and running on your local environment.
 
 ### Prerequisites:
