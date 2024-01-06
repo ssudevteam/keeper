@@ -53,7 +53,7 @@
 <img width="140" alt="Screenshot 2024-01-06 at 12 10 46 PM" src="https://github.com/ssudevteam/keeper/assets/18277544/64eb9bea-d7b0-40d7-9311-a2e9d29c79c8">  &nbsp;  &nbsp;
 <img width="146" alt="Screenshot 2024-01-06 at 12 10 21 PM" src="https://github.com/ssudevteam/keeper/assets/18277544/3489a074-84d1-47c6-aeda-06b2def82676">
 </br></br>
-Keeper is an apicultural(Beekeeping) app to manage the health of our important pollinators. It addresses a common challenge faced by growers: the loss of entire hives due to communication breakdowns within large organizations. Keeper provides teams with the ability to automatically generate work routes/schedules based on the company's most important daily tasks. Our app focuses on animal species and conservation efforts as our entry to the annual Sonoma State University Hackathon, where we placed  2nd overall 🥈!
+Keeper is an apicultural(Beekeeping) app to manage the health of our important pollinators. It addresses a common challenge faced by growers: the loss of entire hives due to communication breakdowns within large organizations. Keeper provides teams with the ability to automatically generate work routes/schedules based on the company's most important daily tasks. Our app focuses on animal species and conservation efforts as our entry to the annual Sonoma State University Hackathon, where we placed  2nd overall!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
