@@ -67,13 +67,14 @@ Keeper is an apicultural(Beekeeping) app to manage the health of our important p
 * [![Mongo][MongoDb]][Mongo-url]
 * [![Google][Google]][Google-url]
 
+</br>
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ### Video Demo of iOS Build
 https://www.youtube.com/watch?v=lyVZktFsbaQ
 
 </br>
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
 <!-- GETTING STARTED -->
