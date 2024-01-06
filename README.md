@@ -59,8 +59,9 @@
 <img width="140" alt="Screenshot 2024-01-06 at 12 10 46 PM" src="https://github.com/ssudevteam/keeper/assets/18277544/64eb9bea-d7b0-40d7-9311-a2e9d29c79c8">  &nbsp;  &nbsp;
 <img width="146" alt="Screenshot 2024-01-06 at 12 10 21 PM" src="https://github.com/ssudevteam/keeper/assets/18277544/3489a074-84d1-47c6-aeda-06b2def82676">
 
-
-Keeper is a mobile app for Beekeeping organizations. It helps to manage and distribute priorities and work loads to ensure the well-being of bee colonies. Managing tasks for a large organization can be challenging and time-consuming. With Keeper, teams can automatically generate work routes/schedules and document in-field metrics.
+<sub>Screenshots on iOS</sub>
+</br></br>
+Keeper is an apicultural(Beekeeping) app that helps bees stay healthy during pollination season. It addresses a common challenge faced by growers: the loss of entire hives due to communication breakdowns within large organizations. Keeper provides teams with the ability to automatically generate work routes/schedules based on the company's most important daily tasks. It also allows easy reporting  of in-field metrics from a mobile app to facilite on-the-job coordination. We set out to create an app that focused on animal species and conservation efforts as our entry to the annual Sonoma State University Hackathon, where we came in 2nd overall!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -71,6 +72,7 @@ Keeper is a mobile app for Beekeeping organizations. It helps to manage and dist
 
 * [![React][React.js]][React-url]
 * [![Expo][Expo.js]][Expo-url]
+* [![Mongo][MongoDb]][Mongo-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -92,76 +94,77 @@ This is an example of how to list things you need to use the software and how to
 
 ### Installation
 
-_Below is an example of how you can instruct your audience on installing and setting up your app. This template doesn't rely on any external dependencies or services._
+## Setup Instructions for the Mobile App
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-   ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+Follow the steps below to get the application up and running on your local environment.
+
+### Prerequisites:
+
+1. **Expo CLI**: The application is developed using Expo, so you will need to install the Expo CLI.
+   
    ```
-3. Install NPM packages
-   ```sh
-   npm install
+   npm install -g expo-cli
    ```
-4. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
+
+### Steps:
+
+1. **Set Up Env. Variables**:
+
+   - Open the `.env` file in the root directory.
+   - Update the IP Address with your personal IP Address. This is necessary for Expo to send/receive app data.
+
    ```
+   IP_ADDRESS=your_ip_address_here
+   ```
+
+2. **Start the Database Server**:
+
+   Navigate to the database directory and run the server:
+
+   ```
+   cd database
+   node server.js
+   ```
+
+   Make sure to keep this terminal running to keep your dev server connected to the database.
+
+3. **Start the Metro Bundler**:
+
+   In a separate terminal, run the following command:
+
+   ```
+   npm start
+   ```
+
+   This will start the Metro Bundler, which bundles the app enabling live-rendering and hot-reloading on your mobile device.
+
+4. **Scan the QR Code**:
+
+   Once the Metro Bundler starts, you'll see a QR code in the terminal. 
+
+   - Ensure you have the `Expo Go` app installed on your mobile device. 
+   - Scan the QR code using your device to open and run the app.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- USAGE EXAMPLES -->
-## Usage
-
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
-
-_For more examples, please refer to the [Documentation](https://example.com)_
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- ROADMAP -->
 ## Roadmap
 
-- [x] Add Changelog
-- [x] Add back to top links
-- [ ] Add Additional Templates w/ Examples
-- [ ] Add "components" document to easily copy & paste sections of the readme
-- [ ] Multi-language Support
-    - [ ] Chinese
-    - [ ] Spanish
+- [ ] Add Multi-Language Support
+- [ ] Add AI Chat Bot to company knowledgebase
+- [ ] Refine Travelling Salesman Algorithim
+- [ ] Create website backend
 
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a full list of proposed features (and known issues).
+See the [open issues](https://github.com/ssudevteam/keeper/issues) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-
-
-<!-- CONTRIBUTING -->
-## Contributing
-
-Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are **greatly appreciated**.
-
-If you have a suggestion that would make this better, please fork the repo and create a pull request. You can also simply open an issue with the tag "enhancement".
-Don't forget to give the project a star! Thanks again!
-
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -170,9 +173,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+SSUDevTeam - ssudevteam@gmail.com
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -181,16 +182,9 @@ Project Link: [https://github.com/your_username/repo_name](https://github.com/yo
 <!-- ACKNOWLEDGMENTS -->
 ## Acknowledgments
 
-Use this space to list resources you find helpful and would like to give credit to. I've included a few of my favorites to kick things off!
-
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Malven's Flexbox Cheatsheet](https://flexbox.malven.co/)
-* [Malven's Grid Cheatsheet](https://grid.malven.co/)
-* [Img Shields](https://shields.io)
-* [GitHub Pages](https://pages.github.com)
-* [Font Awesome](https://fontawesome.com)
-* [React Icons](https://react-icons.github.io/react-icons/search)
+Thank you to the following departments and Mr. Stewart for putting on the Innovating For Social Good Hackathon!
+* [Sonoma State University School of Business and Economics](https://sbe.sonoma.edu)
+* [Sonoma State University School EE](https://ee.sonoma.edu)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -211,8 +205,8 @@ Use this space to list resources you find helpful and would like to give credit 
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [product-screenshot]: images/screenshot.png
-[Next.js]: https://img.shields.io/badge/next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white
-[Next-url]: https://nextjs.org/
+[MongoDB]: https://img.shields.io/badge/MongoDB-4EA94B?style=for-the-badge&logo=mongodb&logoColor=white
+[Mongo-url]: https://www.mongodb.com
 [React.js]: https://img.shields.io/badge/React%20Native-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
 [React-url]: https://reactjs.org/
 [Expo.js]: https://img.shields.io/badge/Expo-35495E?style=for-the-badge&logo=expo&logoColor=4FC08D
