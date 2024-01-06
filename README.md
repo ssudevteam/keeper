@@ -9,7 +9,7 @@
   <h3 align="center">Keeper</h3>
 
   <p align="center">
-    Innovating for Social Good Project
+    Innovating for Social Good
 
 </br>
      By:
@@ -54,9 +54,13 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
+<img width="140" alt="Screenshot 2024-01-06 at 12 10 03 PM" src="https://github.com/ssudevteam/keeper/assets/18277544/d47759fb-b747-41ad-92dc-2ff58fb0c375">  &nbsp;  &nbsp;
+<img width="148" alt="Screenshot 2024-01-06 at 12 10 33 PM" src="https://github.com/ssudevteam/keeper/assets/18277544/b0dbf509-98ee-4f9a-b4f1-4790ac1d548c"> &nbsp; &nbsp;
+<img width="140" alt="Screenshot 2024-01-06 at 12 10 46 PM" src="https://github.com/ssudevteam/keeper/assets/18277544/64eb9bea-d7b0-40d7-9311-a2e9d29c79c8">  &nbsp;  &nbsp;
+<img width="146" alt="Screenshot 2024-01-06 at 12 10 21 PM" src="https://github.com/ssudevteam/keeper/assets/18277544/3489a074-84d1-47c6-aeda-06b2def82676">
 
-Keeper is a mobile app for Beekeeping organizations, helping to efficiently manage work sites and ensure the well-being of bee colonies. Managing tasks for a large organization can be challenging and time-consuming. With Keeper, teams can assign task priorities and have the app automatically generate routes and work schedules. In addition, field workers can use the app on-site to document observations about hives and their specific healths and honey production cycles.
+
+Keeper is a mobile app for Beekeeping organizations. It helps to manage and distribute priorities and work loads to ensure the well-being of bee colonies. Managing tasks for a large organization can be challenging and time-consuming. With Keeper, teams can automatically generate work routes/schedules and document in-field metrics.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -64,7 +68,6 @@ Keeper is a mobile app for Beekeeping organizations, helping to efficiently mana
 
 ### Built With
 
-This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [![React][React.js]][React-url]
 * [![Expo][Expo.js]][Expo-url]
